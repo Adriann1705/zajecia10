@@ -115,6 +115,10 @@ class Manager:
         Returns:
             float | None: total cost for matching bills or None if apartment does not exist.
 
+        Example:
+            >>> manager = Manager(parameters)
+            >>> manager.get_apartment_costs("A101", year=2024, month=6)
+
         """
         if month is not None and (month < 1 or month > 12):
             raise ValueError("Month must be between 1 and 12")
@@ -145,6 +149,10 @@ class Manager:
 
         Returns:
             ApartmentSettlement | None: settlement summary or None if apartment is missing.
+
+        Example:
+            >>> settlement = manager.get_settlement("A101", year=2024, month=6)
+            >>> print(settlement.total_due_pln)
 
         """
         if month < 1 or month > 12:
@@ -247,6 +255,10 @@ class Manager:
 
         Returns:
             float: rounded tax amount for the selected period.
+
+        Example:
+            >>> tax = manager.calculate_tax(year=2024, month=6, tax_rate=0.19)
+            >>> print(tax)
 
         """
         total_income = sum(
