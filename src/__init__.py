@@ -47,11 +47,11 @@ Usage examples
 - manager = Manager()
 - manager.calculate_annual_balance(year=2023)
 
--settlement = manager.get_settlement("A101", year=2024, month=6)
--print(settlement.total_due_pln)
+- settlement = manager.get_settlement("A101", year=2024, month=6)
+- print(settlement.total_due_pln)
 
--tax = manager.calculate_tax(year=2024, month=6, tax_rate=0.19)
--print(tax)
+- tax = manager.calculate_tax(year=2024, month=6, tax_rate=0.19)
+- print(tax)
 
 
 Authors
